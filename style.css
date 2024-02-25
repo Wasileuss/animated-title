@@ -6,67 +6,63 @@
     padding: 10px;
     border-bottom: 3px solid #0071a1;
     z-index: 5;
+}
+.page__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
+.page__hello {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0071a1;
+}
 
-    &__logo {
-        position: relative;
-        max-width: 70px;
-        width: 100%;
-        aspect-ratio: 140 / 120;
-        z-index: 5;
-    }
+.page__content {
+    color: #ffffff;
+    font-size: 38px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
 
-    &__hello {
-        font-weight: 700;
-        color: #0071a1;
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
+}
 
-    &__content {
-        color: #ffffff;
-        font-size: 38px;
-        line-height: 1.25;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 20px;
-    }
+.page__animation {
+    justify-items: center;
+    height: 48px;
+    overflow: hidden;
+}
 
-    &__animation {
-        justify-items: center;
-        height: 48px;
-        overflow: hidden;
-    }
+.page__animation > div > div {
+    padding: 2px 15px;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 4px;
+    display: inline-block;
+}
 
-    &__animation > div > div {
-        padding: 2px 15px;
-        height: 48px;
-        width: 100%;
-        margin-bottom: 4px;
-        display: inline-block;
-    }
+.page__animation div:first-child {
+    animation: text-animation 12s infinite;
+}
 
-    &__animation div:first-child {
-        animation: text-animation 12s infinite;
-    }
-    
-    &__name div {
-        background-color: #20a7d8;
-    }
-    
-    &__technology div {
-        background-color: #d06b00;
-    }
-    
-    &__position div {
-        background-color: #00946f;
-    }
+.page__name div {
+    background-color: #20a7d8;
+}
+
+.page__technology div {
+    background-color: #d06b00;
+}
+
+.page__position div {
+    background-color: #00946f;
 }
 
 @keyframes text-animation {
